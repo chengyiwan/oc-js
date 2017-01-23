@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>timer's html</title>
+        <meta name="viewport"
+        content="width=device-width,initial-scale=1,minimum-scale=1, maximum-scale=1, user-scalable=no">
+    </head>
+    <script type="text/javascript">
+    function jscallswift(){
+        jscall1();
+    }
+    function jscallswiftwithPat(){
+        jscall2('Timer','2222');//调用oc方法，本文以块实现，也可以用JSExport协议实现
+    }
+    function jscallswiftblock(){
+        jscall3('Timer','3333','block');
+    }
+    function jscallblock(block){
+        alert(block);
+    }
+    function buttonclick(){
+        document.getElementById("button").innerHTML = "改变了"
+    }
+    function buttonclick1(name,num){
+        document.getElementById("button1").innerHTML= name+num
+    }
+    
+    </script>
+    <style>
+        #TopView{
+            display: block;
+            height: 60px;
+            line-height: 60px;
+            color:#FFFFF0;
+            margin: 0px auto;
+            background: #4169E1;
+            text-align: center;
+            font-size: 30px;
+        }
+        .box li{list-style:none;display:inline-block;}
+        @media(min-screen:320px) and (max-screen:375px){#mying{height:150px;}
+        }
+    #myimg{
+        max-width:200px;
+    }
+    #myimg img{
+        width:100%
+    }
+    </style>
+   
+    <body>
+        <div id="TopView">首页</div>
+        <P id="myimage">
+            <img src="" alt="">
+        </P>
+        <div type ="btn-block" onclick="jscall('5')">js调用oc的无参数方法</div>
+        <div type= "btn-block" onclick="jscallswiftwithPat()">js调用oc的有参数方法</div>
+        <div type = "btn-block" onclick = "jscallswiftblock()">js调用oc的方法并且回调</div>
+        <p id= "button">会改变的段落</p>
+        <p id= "button1">有参数的改变</p>
+        <hr/>
+        <div class="box">
+            <p id= "AddPfromOC"></p>
+            <ul class="ul1">
+                <li class="change1">首页</li>
+                <li>订单</li>
+                <li>我的</li>
+                <li>渠道管理</li>
+                <li>商户管理</li>
+            </ul>
+        </div>
+        
+        <br><br>
+    </body>
+</html>
